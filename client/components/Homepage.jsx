@@ -7,25 +7,26 @@ export default class Homepage extends React.Component {
   }
 
   changeHandler = e => {
-    const message = 'You have failed the first test - please enter a name not a number'
-    if (e.target.name !== isNaN && e.target.value.length === 0) {
-      console.log(message)
+    let message = ''
+    if (e.target.name === 'username' && e.target.value === '') {
+      message = 'Please enter a name '
     }
+    this.setState({
+      username: e.target.value,
+      message
+    })
   }
     submitHanlder = e => {
-      const message = 'You have failed the first test - please enter a name not a number'
       e.preventDefault()
-      this.setState({
-        [e.target.name]: e.target.value,
-        message
-      })
     }
+
     render () {
       return (
         <React.Fragment>
           <form onSubmit={this.submitHanlder}>
             <input
               type="text"
+              id="nameField"
               value = {this.state.username}
               onChange={this.changeHandler}
               placeholder="Your Name"
