@@ -1,10 +1,14 @@
 import React from 'react'
 
+import Homepage from './Homepage'
+
 class App extends React.Component {
   render () {
     return (
-
-      <h1>Hello THIS Ww0rld!</h1>
+      <React.Fragment>
+        <h1>Hello THIS Ww0rld!</h1>
+        <Homepage />
+      </React.Fragment>
     )
   }
 }
