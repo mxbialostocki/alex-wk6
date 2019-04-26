@@ -1,4 +1,7 @@
 import React from 'react'
+import shuffle from 'lodash.shuffle'
+import take from 'lodash.take'
+
 import { retrieveOracles } from '../api'
 
 class Canvas extends React.Component {
@@ -10,7 +13,7 @@ class Canvas extends React.Component {
     retrieveOracles()
       .then(oracles => {
         this.setState({
-          cards: oracles // drawThree(oracles)
+          cards: draw(oracles, 3) // drawThree(oracles)
         })
         console.log(this.state.cards)
       })
@@ -39,3 +42,7 @@ export default Canvas
 
 //   return selection
 // }
+
+function draw (cards, howMany) {
+  return take(shuffle(cards), howMany)
+}
