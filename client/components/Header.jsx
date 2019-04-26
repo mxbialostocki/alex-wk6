@@ -19,7 +19,7 @@ export default class Header extends React.Component {
 
         <div id="navbarBasicExample" className="navbar-menu">
           <div className="navbar-start">
-            <a className="navbar-item">
+            <a className="navbar-item" href='/'>
                 Home
             </a>
           </div>
