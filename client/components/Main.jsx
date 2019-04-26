@@ -31,7 +31,7 @@ export default class Main extends React.Component {
                   <div className='card large'>
                     <div className="card-image">
                       <figure className='image'>
-                        <img src="https://imgix.bustle.com/rehost/2016/10/21/38e410b9-178f-4d1b-9f4d-0b3c3569b9d4.jpg?w=970&h=546&fit=crop&crop=faces&auto=format&q=70" alt="card3"/>
+                        <img src={"https://imgix.bustle.com/rehost/2016/10/21/38e410b9-178f-4d1b-9f4d-0b3c3569b9d4.jpg?w=970&h=546&fit=crop&crop=faces&auto=format&q=70"} alt="card3"/>
                       </figure>
                     </div>
                   </div>
