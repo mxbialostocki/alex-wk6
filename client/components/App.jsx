@@ -1,12 +1,17 @@
 import React from 'react'
-import Canvas from './Canvas'
+import Header from './Header'
+import Main from './Main'
 
 class App extends React.Component {
   render () {
     return (
       <React.Fragment >
-        <h1>Hello THIS Ww0rld!</h1>
-        <Canvas />
+        <Header />
+        <h1>Welcome to The Forshadowing</h1>
+        
+        <Main />
+
+
       </React.Fragment>
     )
   }
