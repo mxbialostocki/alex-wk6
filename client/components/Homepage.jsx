@@ -1,15 +1,13 @@
 import React from 'react'
 
 export default class Homepage extends React.Component {
-  state= {
-    username: '',
-    message: ''
+  state= {ge: ''
   }
 
   changeHandler = e => {
     let message = ''
-    if (e.target.name === 'username' && e.target.value === '') {
-      message = 'Please enter a name '
+    if (e.target.name === 'username' && e.target.value !== '') {
+      message = 'Name can not be number '
     }
     this.setState({
       username: e.target.value,
@@ -40,6 +38,7 @@ export default class Homepage extends React.Component {
               onClick={this.onClick}/>
           </form>
           <p>{this.state.message}</p>
+      
         </React.Fragment>
       )
     }
