@@ -19,6 +19,9 @@ export default class Homepage extends React.Component {
     submitHanlder = e => {
       e.preventDefault()
     }
+    onClick = () => {
+      this.props.history.push('/Canvas')
+    }
 
     render () {
       return (
@@ -33,7 +36,8 @@ export default class Homepage extends React.Component {
               name="username" />
             <input
               type="submit"
-              value="submit"/>
+              value="submit"
+              onClick={this.onClick}/>
           </form>
           <p>{this.state.message}</p>
         </React.Fragment>
