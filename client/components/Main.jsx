@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default class Main extends React.Component {
+  const { id, card_name, image_url } = this.props
   render () {
     return (
       <body>

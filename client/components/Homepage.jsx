@@ -1,13 +1,15 @@
 import React from 'react'
 
 export default class Homepage extends React.Component {
-  state= { ge: ''
+  state= {
+    username: '',
+    message: ''
   }
 
   changeHandler = e => {
     let message = ''
-    if (e.target.name === 'username' && e.target.value !== '') {
-      message = 'Name can not be number '
+    if (e.target.name === 'username' && e.target.value === '') {
+      message = 'input can not be empty '
     }
     this.setState({
       username: e.target.value,
