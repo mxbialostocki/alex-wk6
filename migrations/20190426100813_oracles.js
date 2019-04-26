@@ -4,6 +4,7 @@ exports.up = (knex, Promise) => {
     table.integer('id').primary()
     table.string('card_name')
     table.string('image_url')
+    table.string('message')
   })
 }
 
