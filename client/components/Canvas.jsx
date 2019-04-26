@@ -1,4 +1,7 @@
 import React from 'react'
+import shuffle from 'lodash.shuffle'
+import take from 'lodash.take'
+
 import { retrieveOracles } from '../api'
 
 class Canvas extends React.Component {
@@ -9,9 +12,8 @@ class Canvas extends React.Component {
   componentDidMount () {
     retrieveOracles()
       .then(oracles => {
-        console.log(oracles)
         this.setState({
-          cards: drawThree(oracles)
+          cards: draw(oracles, 3) // drawThree(oracles)
         })
         console.log(this.state.cards)
       })
@@ -26,25 +28,21 @@ class Canvas extends React.Component {
 
 export default Canvas
 
-// function drawThree (oracleDeck) {
-//   const drawThree = []
-//   while (drawThree.length < 4) {
-//     drawThree.push(oracleDeck[Math.floor(Math.random() * oracleDeck.length)])
+// function drawThree (cards) {
+//   const selection = []
+
+//   for (let i = 0; i < 3; i++) {
+//     const randomCard = cards[Math.floor(Math.random() * cards.length)]
+//     if (!selection.includes(randomCard)) {
+//       selection.push(randomCard)
+//     } else {
+//       i--
+//     }
 //   }
-//   return drawThree
+
+//   return selection
 // }
 
-function drawThree (cards) {
-  const selection = []
-
-  for (let i = 0; i < 3; i++) {
-    const randomCard = cards[Math.floor(Math.random() * cards.length)]
-    if (!selection.includes(randomCard)) {
-      selection.push(randomCard)
-    } else {
-      i--
-    }
-  }
-
-  return selection
+function draw (cards, howMany) {
+  return take(shuffle(cards), howMany)
 }

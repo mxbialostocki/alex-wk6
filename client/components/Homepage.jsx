@@ -14,7 +14,7 @@ export default class Homepage extends React.Component {
       message
     })
   }
-    submitHanlder = e => {
+    submitHandler = e => {
       e.preventDefault()
     }
     onClick = () => {
@@ -24,7 +24,7 @@ export default class Homepage extends React.Component {
     render () {
       return (
         <React.Fragment>
-          <form onSubmit={this.submitHanlder}>
+          <form onSubmit={this.submitHandler}>
             <input
               type="text"
               id="nameField"
