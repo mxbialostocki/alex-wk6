@@ -13,9 +13,17 @@ body {
 }
 
  h1 {
-  text-align: center
+  text-align: center;
+  font-size: 35pt
+
 }
 
  .yourName {
   text-align: center
 } 
+
+.tile {
+background-color: rgb(233, 233, 233)
+
+
+}

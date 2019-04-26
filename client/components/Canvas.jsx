@@ -38,8 +38,8 @@ class Canvas extends React.Component {
               <div className='message'>
                 <div className='tile is-parent'>
                   <article className='tile is-child box'>
-                    <p className='title'>Reading:</p>
-                    <p className='subtitle'>there needs to be a message in here Bam</p>
+                    <p className='title'>Oracle has spoken:</p>
+                    <p className='subtitle'>I was at a fancy dress party, and I ran into a friend of mine, dressed as a turtle with another girl on her back I asked “who’s the other girl”  She said... Michelle</p>
                   </article>
                 </div>
               </div>

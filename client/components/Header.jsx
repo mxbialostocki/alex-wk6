@@ -30,8 +30,9 @@ export default class Header extends React.Component {
             <a className="tileTOP">
               <strong>Alex Team</strong>
             </a>
+            <span> </span>
             <a className="tileTOP">
-                The Forshadowing
+                  The  Forshadowing
             </a>
             {/* </div> */}
           </div>
